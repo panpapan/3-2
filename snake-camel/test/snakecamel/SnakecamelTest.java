@@ -6,6 +6,20 @@ import org.junit.Test;
 
 public class SnakecamelTest {
 	@Test
+	public void capitalizeで頭文字を大文字にできる(){
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "Apple";
+		String actual = scu.capitalize("apple");
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void uncapitalizeで頭文字を小文字にできる(){
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "apple";
+		String actual = scu.uncapitalize("Apple");
+		assertEquals(expected, actual);
+	}
+	@Test
 	public void snakeToCamelcaseでapple_orangeをキャメルケースに変換できる(){
 		SnakeCamelUtil scu = new SnakeCamelUtil();
 		String expected = "AppleOrange";
